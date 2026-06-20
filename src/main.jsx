@@ -9,7 +9,8 @@ const SITE = {
   email: 'info@edoxlogistics.nl',
   instagram: 'https://instagram.com/edoxlogistics',
   linkedin: 'https://linkedin.com/company/edox-logistics',
-  heroImage: './assets/images/edox-hero-truck.jpg', // Vervang later door een echte EDOX-truckfoto.
+  // Dit pad wordt vanuit de door Vite gebouwde CSS-bundel opgelost.
+  heroImage: '../assets/images/edox-hero-truck.jpg', // Vervang later door een echte EDOX-truckfoto.
 };
 
 const translations = {

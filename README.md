@@ -1,6 +1,6 @@
-# Northride Logistics — onepage demo
+# EDOX Logistics
 
-Premium React/Vite-onepager voor een Nederlands transport- en logistiekbedrijf. `Northride Logistics` is een tijdelijke merknaam en kan samen met de contactgegevens worden vervangen zodra de definitieve huisstijl beschikbaar is.
+Premium meertalige React/Vite-onepager voor EDOX Logistics: transportcapaciteit, CE-bestuurders, chauffeursdiensten en internationale chauffeur-werving.
 
 ## Lokaal starten
 
@@ -16,13 +16,15 @@ npm run build
 npm run preview
 ```
 
-De map `dist/` kan direct naar Netlify, Vercel of GitHub Pages. `base: './'` in `vite.config.js` houdt assets bruikbaar onder een GitHub Pages-subpad.
+De map `dist/` wordt via `.github/workflows/deploy-pages.yml` automatisch naar GitHub Pages gepubliceerd.
 
-## Aanpassen
+## Centraal aanpassen
 
-- Huisstijl, typografie, radii, schaduwen en spacing: `src/styles.css` onder `:root`.
-- Teksten, telefoonnummers, diensten en placeholder-logo: `src/main.jsx`.
-- SEO-title en meta description: `index.html`.
-- Formulierkoppeling: zoek in `src/main.jsx` naar `KOPPELPUNT` en vervang de demo-`onSubmit` door Netlify Forms, Formspree, EmailJS of een eigen API.
+- Merk, telefoon, e-mail, socials en hero-afbeelding: `SITE` bovenaan `src/main.jsx`.
+- Nederlandse, Engelse en Russische teksten: `translations` in `src/main.jsx`.
+- Kleuren, fonts, spacing, radii en schaduwen: `:root` in `src/styles.css`.
+- SEO, Open Graph, Twitter Card, canonical en hreflang: `index.html`.
+- Formulierkoppelingen: zoek in `src/main.jsx` naar `KOPPELPUNT`.
+- Beelden: `public/assets/images/`.
 
-De pagina bevat geen externe fotografie; de hero gebruikt een lichte, code-native logistieke visual. Daardoor blijft de eerste demo snel en rechtenvrij.
+Talen gebruiken voorlopig een centrale dictionary met `?lang=en` en `?lang=ru`. Zodra aparte statische routes worden uitgerold, kunnen de hreflang-links worden omgezet naar `/en/` en `/ru/`.

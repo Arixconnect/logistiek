@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EDOX Logistics">
+  <rect width="64" height="64" rx="10" fill="#0047A1"/>
+  <path d="M32 7l4.4 14.1L51 17l-9.1 11.8L55 36l-14.8.4L45 51l-13-8.5L19 51l4.8-14.6L9 36l13.1-7.2L13 17l14.6 4.1L32 7z" fill="#fff"/>
+  <circle cx="32" cy="32" r="8" fill="#D32F2F"/>
+</svg>

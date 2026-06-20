@@ -1,8 +1,6 @@
 name: Publiceer website op GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +21,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+
+      - name: EDOX beeldbestanden herstellen
+        run: |
+          mkdir -p public/assets/images
+          base64 --decode assets-source/edox-hero-truck.jpg.b64 > public/assets/images/edox-hero-truck.jpg
+          base64 --decode assets-source/og-edox-logistics.jpg.b64 > public/assets/images/og-edox-logistics.jpg
 
       - name: Node.js instellen
         uses: actions/setup-node@v4

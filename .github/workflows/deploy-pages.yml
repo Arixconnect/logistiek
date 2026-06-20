@@ -17,9 +17,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Repository ophalen
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Node.js instellen
         uses: actions/setup-node@v4
@@ -47,6 +50,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: build
     steps:
       - name: Publiceren

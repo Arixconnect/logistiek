@@ -1,6 +1,68 @@
 name: Publiceer website op GitHub Pages
 
 on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: EDOX beeldbestanden herstellen
+        run: |
+          mkdir -p public/assets/images
+          base64 --decode assets-source/edox-hero-truck.jpg.b64 > public/assets/images/edox-hero-truck.jpg
+          base64 --decode assets-source/og-edox-logistics.jpg.b64 > public/assets/images/og-edox-logistics.jpg
+
+      - name: Node.js instellen
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Dependencies installeren
+        run: npm install
+
+      - name: Website bouwen
+        run: npm run build
+
+      - name: GitHub Pages instellen
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Websitepakket uploaden
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build
+    steps:
+      - name: Publiceren
+        id: deployment
+        uses: actions/deploy-pages@v4
+name: Publiceer website op GitHub Pages
+
+on:
   push:
     branches: [main]
   workflow_dispatch:

@@ -8,7 +8,7 @@ const T = {
   topbar: 'Transportoplossingen voor Nederland, Duitsland en België',
   quote: 'Offerte aanvragen',
   driverCta: 'Chauffeur aanmelden',
-  heroTitle: 'Transportcapaciteit waar je op kunt bouwen.',
+  heroTitle: 'Transport\u00ADcapaciteit waar je op kunt bouwen.',
   heroText: 'Betrouwbaar transport en flexibele chauffeursdiensten voor bedrijven in Nederland, Duitsland, België en West-Europa. Duidelijke communicatie, sterke uitvoering en afspraak = afspraak.',
   trustBadges: ['Afspraak = afspraak', 'CE-bestuurders', 'Nederland, Duitsland & België', 'Internationale chauffeurs'],
   clientBullets: ['Transportbedrijf Nederland', 'Zakelijk transport', 'Chauffeursdiensten', 'CE-bestuurders', 'Flexibele transportcapaciteit', 'Duidelijke communicatie'],

@@ -29,6 +29,7 @@ jobs:
           mkdir -p public/assets/images
           base64 --decode assets-source/edox-hero-truck.jpg.b64 > public/assets/images/edox-hero-truck.jpg
           base64 --decode assets-source/og-edox-logistics.jpg.b64 > public/assets/images/og-edox-logistics.jpg
+          base64 --decode assets-source/edox-truck-final.jpg.b64 > public/assets/images/edox-truck-final.jpg
 
       - name: Node.js instellen
         uses: actions/setup-node@v4

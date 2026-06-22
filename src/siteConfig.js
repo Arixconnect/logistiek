@@ -10,7 +10,7 @@ export const SITE = {
 // Centraal beeldbeheer. Vervang deze afbeeldingen later door echte EDOX-foto's.
 // Lege waarden gebruiken bewust dezelfde abstracte EDOX-placeholderstijl.
 export const IMAGES = {
-  hero: '../assets/images/edox-hero-truck.jpg', // Vervang deze afbeelding later door echte EDOX truckfoto.
+  hero: '../assets/images/edox-truck-final.jpg', // Definitieve, door EDOX aangeleverde truckfoto.
   opdrachtgevers: null, // Vervang deze afbeelding later door echte EDOX truckfoto.
   chauffeurs: null, // Vervang deze afbeelding later door echte EDOX chauffeurfoto.
   betrouwbaarheid: null, // Vervang deze afbeelding later door echte EDOX transportfoto.
